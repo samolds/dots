@@ -2,7 +2,7 @@
 	name = Sam Olds
 	email = samolds@gmail.com
 [core]
-  editor = vim
+	editor = vim
 [color]
   branch = auto
   diff = auto
@@ -20,3 +20,5 @@
   added = yellow
   changed = green
   untracked = cyan
+[push]
+	default = simple
