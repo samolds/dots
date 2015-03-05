@@ -22,3 +22,5 @@
   untracked = cyan
 [push]
 	default = simple
+[branch]
+	autosetuprebase = always
