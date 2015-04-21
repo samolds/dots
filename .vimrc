@@ -5,8 +5,9 @@ set expandtab
 set softtabstop=2
 set autoindent
 set nu
- 
+
 syntax on
 set background=dark
- 
+
+autocmd FileType make setlocal noexpandtab
 autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
