@@ -4,6 +4,8 @@ set smarttab
 set expandtab
 set softtabstop=2
 set autoindent
+set ignorecase
+set smartcase
 set nu
 
 syntax on
