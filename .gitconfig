@@ -1,8 +1,8 @@
 [user]
-	name = Sam Olds
-	email = samolds@gmail.com
+  name = Sam Olds
+  email = samolds@gmail.com
 [core]
-	editor = vim
+  editor = vim
 [color]
   branch = auto
   diff = auto
@@ -21,6 +21,6 @@
   changed = green
   untracked = cyan
 [push]
-	default = simple
+  default = simple
 [branch]
-	autosetuprebase = always
+  autosetuprebase = always
