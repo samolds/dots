@@ -10,6 +10,10 @@ set nu
 
 syntax on
 set background=dark
+"colorscheme desert
 
 autocmd FileType make setlocal noexpandtab
 autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+
+autocmd BufNewFile,BufRead *.ino setlocal ft=arduino
+autocmd BufNewFile,BufRead *.pde setlocal ft=arduino
