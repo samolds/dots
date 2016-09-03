@@ -15,7 +15,7 @@ set background=dark
 
 "to add the column width vertical line indicator
 if exists('+colorcolumn')
-  highlight ColorColumn ctermbg=7
+  highlight ColorColumn ctermbg=1
   set colorcolumn=80
 else
  au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
