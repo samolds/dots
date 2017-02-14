@@ -8,6 +8,7 @@ set ignorecase
 set smartcase
 set number
 set cursorline
+set nohlsearch
 
 syntax on
 set background=dark
