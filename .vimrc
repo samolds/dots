@@ -9,6 +9,8 @@ set smartcase
 set number
 set cursorline
 set nohlsearch
+set splitbelow
+set splitright
 
 syntax on
 set background=dark

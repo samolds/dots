@@ -16,3 +16,14 @@ export GOPATH="${HOME}/projects/gowork"
 # Useful Reminders
 # Copy my ssh public key to remote machine:
 # cat ~/.ssh/id_rsa.pub | ssh user@123.45.56.78 "mkdir -p ~/.ssh && cat >>  ~/.ssh/authorized_keys"
+
+journal() {
+  cd $HOME/projects/journal
+  journalfile="`date +"%Y-%m-%d"`.md"
+  if [ ! -f $journalfile ]; then
+    printf "== `date +"%A %D"` ==\n\n\n" >> $journalfile
+  else
+    printf "\n---\n\n\n" >> $journalfile
+  fi
+  vim $journalfile
+}
