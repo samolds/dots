@@ -11,6 +11,7 @@ set cursorline
 set nohlsearch
 set splitbelow
 set splitright
+set textwidth=79
 
 syntax on
 set background=dark
