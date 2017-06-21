@@ -8,7 +8,7 @@ alias vimo="vim -O"
 export PS1='\w$ '
 export HISTCONTROL=ignoreboth:erasedups
 
-# set -o vi
+set -o vi
 stty -ixon
 
 export GOPATH="${HOME}/projects/gowork"
