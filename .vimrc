@@ -49,3 +49,12 @@ inoremap # X<BS>#
 
 autocmd BufNewFile,BufRead *.ino setlocal ft=arduino
 autocmd BufNewFile,BufRead *.pde setlocal ft=arduino
+
+"sets tabwidth for other projects to be different
+function! SetupEnvironment()
+  let l:path = expand('%:p')
+  if l:path =~ '/Users/samolds/work'
+    setlocal tabstop=4 shiftwidth=4 softtabstop=4
+  endif
+endfunction
+autocmd! BufReadPost,BufNewFile * call SetupEnvironment()
