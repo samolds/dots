@@ -12,13 +12,14 @@ set nohlsearch
 set splitbelow
 set splitright
 
+set t_Co=256
 syntax on
 set background=dark
 "colorscheme desert
 
 "to add the column width vertical line indicator
 if exists('+colorcolumn')
-  highlight ColorColumn ctermbg=1
+  highlight ColorColumn ctermbg=8
   set colorcolumn=80
 else
  au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
