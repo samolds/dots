@@ -50,6 +50,7 @@ inoremap # X<BS>#
 
 autocmd BufNewFile,BufRead *.ino setlocal ft=arduino
 autocmd BufNewFile,BufRead *.pde setlocal ft=arduino
+autocmd BufNewFile,BufRead *.md setlocal ft=markdown
 
 "sets tabwidth for other projects to be different
 function! SetupEnvironment()
