@@ -34,6 +34,11 @@ autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,
 "so the python comment symbol `#` doesn't get placed at the beginning of lines
 inoremap # X<BS>#
 
+"for go to defition splits with ctags
+set tags=tags
+map gd :split <CR>:exec("tag ".expand("<cword>"))<CR>
+map gv :vsplit <CR>:exec("tag ".expand("<cword>"))<CR>
+
 "change split navigation key mapping to be more similar to screen
   "unmap new window <C-W>n to <C-W>c
   nnoremap <C-W><C-C> <C-W><C-N>
@@ -51,6 +56,8 @@ inoremap # X<BS>#
 autocmd BufNewFile,BufRead *.ino setlocal ft=arduino
 autocmd BufNewFile,BufRead *.pde setlocal ft=arduino
 autocmd BufNewFile,BufRead *.md setlocal ft=markdown
+autocmd BufNewFile,BufRead *.ts setlocal ft=typescript
+autocmd BufNewFile,BufRead *.tsx setlocal ft=typescript
 
 "sets tabwidth for other projects to be different
 function! SetupEnvironment()
