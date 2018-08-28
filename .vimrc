@@ -36,7 +36,7 @@ inoremap # X<BS>#
 
 "for go to defition splits with ctags
 set tags=tags
-map gd :split <CR>:exec("tag ".expand("<cword>"))<CR>
+"map gd :split <CR>:exec("tag ".expand("<cword>"))<CR>
 map gv :vsplit <CR>:exec("tag ".expand("<cword>"))<CR>
 
 "change split navigation key mapping to be more similar to screen
