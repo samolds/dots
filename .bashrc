@@ -21,6 +21,7 @@ alias gitSubmoduleHardUpdate="git fetch && git reset --hard master && git clean 
 alias gitMatchOrigin="git fetch origin && git reset --hard origin/master"
 
 journal() {
+  mkdir -p $HOME/projects/journal
   cd $HOME/projects/journal
   journalfile="`date +"%Y-%m-%d"`.md"
   if [ ! -f $journalfile ]; then
@@ -29,4 +30,16 @@ journal() {
     printf "\n---\n\n\n" >> $journalfile
   fi
   vim $journalfile
+}
+
+notes() {
+  mkdir -p $HOME/projects/notes
+  cd $HOME/projects/notes
+  notesfile="`date +"%Y-%m-%d"`.md"
+  if [ ! -f $notesfile ]; then
+    printf "== `date +"%A %D"` ==\n\n\n" >> $notesfile
+  else
+    printf "\n---\n\n\n" >> $notesfile
+  fi
+  vim $notesfile
 }
