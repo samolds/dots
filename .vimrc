@@ -34,10 +34,10 @@ autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,
 "so the python comment symbol `#` doesn't get placed at the beginning of lines
 inoremap # X<BS>#
 
-"for go to defition splits with ctags
-set tags=tags
-"map gd :split <CR>:exec("tag ".expand("<cword>"))<CR>
-map gv :vsplit <CR>:exec("tag ".expand("<cword>"))<CR>
+""for go to defition splits with ctags
+"set tags=tags
+""map gd :split <CR>:exec("tag ".expand("<cword>"))<CR>
+"map gv :vsplit <CR>:exec("tag ".expand("<cword>"))<CR>
 
 "change split navigation key mapping to be more similar to screen
   "unmap new window <C-W>n to <C-W>c
@@ -59,11 +59,16 @@ autocmd BufNewFile,BufRead *.md setlocal ft=markdown
 autocmd BufNewFile,BufRead *.ts setlocal ft=typescript
 autocmd BufNewFile,BufRead *.tsx setlocal ft=typescript
 
-"sets tabwidth for other projects to be different
-function! SetupEnvironment()
-  let l:path = expand('%:p')
-  if l:path =~ '/Users/samolds/work'
-    setlocal tabstop=4 shiftwidth=4 softtabstop=4
-  endif
-endfunction
-autocmd! BufReadPost,BufNewFile * call SetupEnvironment()
+""for go to defition splits with ctags
+"set tags=tags
+""map gd :split <CR>:exec("tag ".expand("<cword>"))<CR>
+"map gv :vsplit <CR>:exec("tag ".expand("<cword>"))<CR>
+
+""sets tabwidth for other projects to be different
+"function! SetupEnvironment()
+"  let l:path = expand('%:p')
+"  if l:path =~ '/Users/samolds/work'
+"    setlocal tabstop=4 shiftwidth=4 softtabstop=4
+"  endif
+"endfunction
+"autocmd! BufReadPost,BufNewFile * call SetupEnvironment()
