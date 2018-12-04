@@ -1,4 +1,7 @@
 " needs https://github.com/rogpeppe/rog-go/tree/master/exp/cmd/godef/godef.go
+"     go get github.com/rogpeppe/godef
+"     go install .../godef
+" make sure ${GOPATH}/bin is in the ${PATH}
 
 if !exists("g:godef_command")
     let g:godef_command = "godef"
