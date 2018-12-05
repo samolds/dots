@@ -72,3 +72,10 @@ autocmd BufNewFile,BufRead *.tsx setlocal ft=typescript
 "  endif
 "endfunction
 "autocmd! BufReadPost,BufNewFile * call SetupEnvironment()
+
+"for vim-plug
+call plug#begin()
+"Plug 'tpope/vim-sensible'
+"Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+call plug#end()
