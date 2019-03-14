@@ -60,7 +60,8 @@ endfunction
 
 
 
-let g:godef_same_file_in_same_window=1
+"uncomment so that godefs with defs in the same file don't open new split
+"let g:godef_same_file_in_same_window=1
 
 function GodefUnderCursorH()
  let g:godef_split=1
