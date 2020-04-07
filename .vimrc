@@ -73,9 +73,12 @@ autocmd BufNewFile,BufRead *.tsx setlocal ft=typescript
 "endfunction
 "autocmd! BufReadPost,BufNewFile * call SetupEnvironment()
 
-"for vim-plug
+"for 'vim-plug'
+"download everything with ':PlugInstall'
 call plug#begin()
+"Plug 'tpope/vim-rails'
 "Plug 'tpope/vim-sensible'
 "Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'jidn/vim-dbml'
 call plug#end()
