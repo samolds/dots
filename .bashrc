@@ -4,6 +4,9 @@ alias rebash="source ~/.bash_profile"
 alias ll="ls -lsah"
 alias vimo="vim -O"
 
+# extended regex, ignore binary, case insensitive, recurse dirs, line nums
+alias grp="grep -EIirn --color --exclude-dir={pkg,bin,node_modules}"
+
 # http://superuser.com/a/239995
 export PS1='\w$ '
 export HISTCONTROL=ignoreboth:erasedups
