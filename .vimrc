@@ -28,57 +28,37 @@ endif
 "to not convert \t to '  ' in Makefiles
 autocmd FileType make setlocal noexpandtab
 
-"to autoindent in python files
-autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
-
-"so the python comment symbol `#` doesn't get placed at the beginning of lines
-inoremap # X<BS>#
-
-""for go to defition splits with ctags
-"set tags=tags
-""map gd :split <CR>:exec("tag ".expand("<cword>"))<CR>
-"map gv :vsplit <CR>:exec("tag ".expand("<cword>"))<CR>
-
 "change split navigation key mapping to be more similar to screen
-  "unmap new window <C-W>n to <C-W>c
-  nnoremap <C-W><C-C> <C-W><C-N>
-  nnoremap <C-W>c <C-W>n
-  "move circular right
-  nnoremap <C-W><C-N> <C-W><C-W>
-  nnoremap <C-W>n <C-W>w
-  "move to previous
-  nnoremap <C-W><C-W> <C-W><C-P>
-  nnoremap <C-W>w <C-W>p
-  "move left
-  nnoremap <C-W><C-P> <C-W><C-H>
-  nnoremap <C-W>p <C-W>h
+"unmap new window <C-W>n to <C-W>c
+nnoremap <C-W><C-C> <C-W><C-N>
+nnoremap <C-W>c <C-W>n
+"move circular right
+nnoremap <C-W><C-N> <C-W><C-W>
+nnoremap <C-W>n <C-W>w
+"move to previous
+nnoremap <C-W><C-W> <C-W><C-P>
+nnoremap <C-W>w <C-W>p
+"move left
+nnoremap <C-W><C-P> <C-W><C-H>
+nnoremap <C-W>p <C-W>h
 
-autocmd BufNewFile,BufRead *.ino setlocal ft=arduino
-autocmd BufNewFile,BufRead *.pde setlocal ft=arduino
 autocmd BufNewFile,BufRead *.md setlocal ft=markdown
 autocmd BufNewFile,BufRead *.ts setlocal ft=typescript
 autocmd BufNewFile,BufRead *.tsx setlocal ft=typescript
 
-""for go to defition splits with ctags
-"set tags=tags
-""map gd :split <CR>:exec("tag ".expand("<cword>"))<CR>
-"map gv :vsplit <CR>:exec("tag ".expand("<cword>"))<CR>
-
-""sets tabwidth for other projects to be different
-"function! SetupEnvironment()
-"  let l:path = expand('%:p')
-"  if l:path =~ '/Users/samolds/work'
-"    setlocal tabstop=4 shiftwidth=4 softtabstop=4
-"  endif
-"endfunction
-"autocmd! BufReadPost,BufNewFile * call SetupEnvironment()
-
 "for 'vim-plug'
-"download everything with ':PlugInstall'
-call plug#begin()
-"Plug 'tpope/vim-rails'
-"Plug 'tpope/vim-sensible'
-"Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'jidn/vim-dbml'
+"1. install ~/.vim/autoload/plug.vim from https://github.com/junegunn/vim-plug
+"2. download everything with ':PlugInstall'
+call plug#begin('~/.vim/vimplug_plugins')
+Plug 'fatih/vim-go', { 'tag': 'v1.24', 'do': ':GoUpdateBinaries' }
 call plug#end()
+
+"vim-go specific
+let g:go_echo_command_info = 0
+let g:go_def_reuse_buffer = 0
+"let g:go_bin_path = ""
+let g:go_def_mapping_enabled = 1
+
+au FileType go nmap gd <Plug>(go-def)
+au FileType go nmap gs <Plug>(go-def-split)
+au FileType go nmap gv <Plug>(go-def-vertical)
